@@ -1,9 +1,9 @@
 import React from 'react';
-import { Project, getAllProject } from '@/service/projects';
-import Image from 'next/image';
-import Link from 'next/link';
-import { BsGithub, BsArrowUpRightSquare } from 'react-icons/bs';
 import SlideUp from './SlideUp';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Project, getAllProject } from '@/service/projects';
+import { BsGithub, BsArrowUpRightSquare } from 'react-icons/bs';
 
 // type Props = {project:Project}
 export default async function ProjectsSection() {

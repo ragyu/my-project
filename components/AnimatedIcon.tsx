@@ -1,10 +1,19 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
+import myIcon from '../public/gmail.png';
 import { motion } from 'framer-motion';
-import { SiGithub, SiGmail, SiNaver } from 'react-icons/si';
+import { SiGithub, SiNaver } from 'react-icons/si';
 const LINKS = [
   { icon: <SiGithub />, url: 'https://github.com/ragyu' },
-  { icon: <SiGmail />, url: 'mailto:ragyu0506@naver.com' },
+  {
+    icon: <SiNaver className="text-green-500" />,
+    url: 'mailto:ragyu0506@naver.com',
+  },
+  {
+    img: <Image src={myIcon} alt="My Icon" />,
+    url: 'https://mail.google.com/mail/u/0/?view=cm&fs=1&to=ragyu0506@gmail.com&body=&subject=',
+  },
 ];
 export default function AnimatedIcon() {
   return (
@@ -20,7 +29,7 @@ export default function AnimatedIcon() {
             whileHover={{ y: 2 }}
             whileTap={{ scale: 0.9 }}
           >
-            {link.icon}
+            {link.icon || link.img}
           </motion.a>
         ))}
       </ul>

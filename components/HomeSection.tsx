@@ -2,14 +2,14 @@
 import React from 'react';
 import Image from 'next/image';
 import profileImage from '../public/images/Main.jpg';
+import AnimatedIcon from './AnimatedIcon';
 import AnimatedText from './AnimatedText';
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 import { HiArrowDown } from 'react-icons/hi';
 import { AiOutlineUser, AiFillCalendar } from 'react-icons/ai';
 import { MdLocationOn } from 'react-icons/md';
-import AnimatedIcon from './AnimatedIcon';
 
-export default function HeroSection() {
+export default function HomeSection() {
   return (
     <section id="home">
       <div className="flex flex-col text-center items-center justify-center my-10 py-16 sm:py-14 md:py-16 md:flex-row md:space-x-4 md:text-left">
@@ -61,6 +61,18 @@ export default function HeroSection() {
             제 프로젝트들을 소개하는 홈페이지 입니다.
           </p>
         </div>
+      </div>
+      <div className="flex flex-row justify-center cursor-pointer mb-28">
+        <Link
+          to="projects"
+          activeClass="action"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+        >
+          <HiArrowDown size={35} className="animate-bounce" />
+        </Link>
       </div>
     </section>
   );

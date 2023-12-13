@@ -9,12 +9,20 @@ export default function Navbar() {
             </a>
           </div>
         </div>
-        <div style={{ display: 'flex', gap: '50px' }}>
-          <a href="https://github.com/kdc3246/port2023-next" target="blank">
+        <div className="flex gap-12">
+          <a
+            href="https://github.com/kdc3246/port2023-next"
+            target="blank"
+            className="block lg:inline-block text-neutral-900 hover:text-neutral-500 justify-center md:space-x-6 cursor-pointer"
+          >
             Capston Project
           </a>
 
-          <a href="https://github.com/ragyu?tab=repositories" target="blank">
+          <a
+            href="https://github.com/ragyu?tab=repositories"
+            target="blank"
+            className="block lg:inline-block text-neutral-900 hover:text-neutral-500 justify-center md:space-x-6 cursor-pointer"
+          >
             My Repository
           </a>
         </div>

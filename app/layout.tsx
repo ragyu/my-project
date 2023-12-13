@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.className}>
       <body className="flex flex-col w-full mx-auto">
+        background-image: url('/path/to/image.jpg');
         <Navbar />
         <main className="md:mx-auto max-w-3xl px-4 sm:px-6 overflow-x-hidden md:max-w-5xl">
           {children}
